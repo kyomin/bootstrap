@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 반응형 웹을 위해 필수적으로 들어가야 하는 메타 태그 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>CSS를 활용한 반응형 웹 코딩</title>
+    <style>
+        /* 태그들이 기본적으로 가지고 있는 값을 0으로 만들어버린다. => 커스터마이징을 위함 */
+        * { 
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: pink;
+        }
+        #wrapper {
+            border: 1px solid gray;
+            width: 80%;
+            margin: 0 auto;
+            font-size: 2vw;     /* vw: 디바이스 크기에 따라 비례해서 width 값 주기 */
+        }
+        nav li {
+            list-style: none;
+            float: left;
+            border: 1px solid gray;
+            width: 20%;
+            box-sizing: border-box; /* 태그 사이즈는 border까지 포함해서 계산하라(그렇지 않으면 넘쳐서 아래로 배치됨) */
+            text-align: center;
+        }
+        nav ul {
+            overflow: hidden;
+        }
+        header h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header {
+            padding: 20px 0 0 0;
+            border: 1px solid gray;
+        }
+        .content {
+            padding: 10px;
+        }
+        footer {
+            border: 1px solid gray;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        @media (max-width: 767px) {
+            body {
+                background-color: purple;
+            }
+            #wrapper {
+                width: 100%;
+                font-size: 2em;     /* 감싸고 있는 컨테이너의 글자 크기를 기준으로 계산 */
+            }
+            nav li {
+                width: 100%;
+            }
+        }
+        @media (min-width: 768px) { /* 아래에 위치 시키면 위에 설정한 것을 덮어씌운다. */
+            body {
+                background-color: orange;
+            }
+            #wrapper {
+                width: 100%
+            }
+        }
+        @media (min-width: 992px) { /* 디바이스 사이즈가 992px 이상일 때 적용할 CSS 정의 */
+            body {
+                background-color: lightblue;
+            }
+            #wrapper {
+                width: 80%
+            }
+        }
+        @media (min-width: 1200px) {
+            body {
+                background-color: mediumspringgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="wrapper">
+            <header>
+                <h1>반응형 웹</h1>
+                <nav>
+                    <ul>
+                        <li>menu1</li>
+                        <li>menu2</li>
+                        <li>menu3</li>
+                        <li>menu4</li>
+                        <li>menu5</li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="content">
+                <h2>
+                    반응형 웹은
+                    미디어쿼리를 사용하여
+                    스타일링한다.
+                </h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis quo ab magni. Consectetur odit quibusdam at. In necessitatibus totam minus aut temporibus accusantium quam, itaque repellendus deleniti, culpa eius porro!                
+                </p>
+            </div>
+            <footer>
+                <h1>
+                    designed by Kyomin
+                </h1>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
