@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>부트스트랩 시작</title>
+
+        <!-- 부트스트랩 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            div {
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- 
+                sm: 768px보다 큰 경우에는 이 분할 기법이 적용 되는데,
+                그 미만일 때에는 적용되는 것이 풀려 전체(12)를 가져가게 된다.
+            -->
+            <div class="row">
+                <div class="col-sm-6">col-sm-6</div>
+                <div class="col-sm-6">col-sm-6</div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">col-sm-8</div>
+                <div class="col-sm-4">col-sm-4</div>
+            </div>
+
+            <!-- 
+                xs: 768px보다 작은 경우에도 적용이 된다.
+                어떤 사이즈에서건 동일한 비율을 유지하고 싶을 때 사용하자!
+            -->
+            <div class="row">
+                <div class="col-xs-8">col-xs-8</div>
+                <div class="col-xs-4">col-xs-4</div>
+            </div>
+            
+            <!-- 
+                md: 992px보다 큰 경우에는 이 분할 기법이 적용 되는데,
+                그 미만일 때에는 적용되는 것이 풀려 전체(12)를 가져가게 된다.
+            -->
+            <div class="row">
+                <div class="col-md-8">col-md-8</div>
+                <div class="col-md-4">col-md-4</div>
+            </div>
+
+            <!-- 
+                lg: 1200px보다 큰 경우에는 이 분할 기법이 적용 되는데,
+                그 미만일 때에는 적용되는 것이 풀려 전체(12)를 가져가게 된다.
+            -->
+            <div class="row">
+                <div class="col-lg-8">col-lg-8</div>
+                <div class="col-lg-4">col-lg-4</div>
+            </div>
+        </div>
+
+        <!-- import Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
