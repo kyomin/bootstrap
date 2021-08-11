@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>디바이스마다 달라지는 레이아웃</title>
+
+        <!-- 부트스트랩 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            div {
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-8 col-sm-6 col-md-4 col-lg-9">col-xs-8 col-sm-6 col-md-4 col-lg-9</div>
+                <div class="col-xs-4 col-sm-6 col-md-8 col-lg-3">col-xs-4 col-sm-6 col-md-8 col-lg-3</div>
+            </div>
+
+            <!-- without xs device -->
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-9">col-sm-6 col-md-4 col-lg-9</div>
+                <div class="col-sm-6 col-md-8 col-lg-3">col-sm-6 col-md-8 col-lg-3</div>
+            </div>
+        </div>
+
+        <!-- import Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

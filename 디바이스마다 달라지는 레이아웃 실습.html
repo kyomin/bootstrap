@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>디바이스마다 달라지는 레이아웃 실습</title>
+
+        <!-- 부트스트랩 -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            h1 {
+                border: 1px solid gray;
+            }
+            .row:nth-of-type(1) {
+                background-color: skyblue;
+            }
+            .row:nth-of-type(2) {
+                background-color: aqua
+            }
+            .row:nth-of-type(3) {
+                background-color: deepskyblue
+            }
+            .row:nth-of-type(4) {
+                background-color: blue
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center"> lorem </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1 class="text-center"> ipsum </h1>
+                </div>
+                <div class="col-sm-4">
+                    <h1 class="text-center"> dolor </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h1 class="text-center"> lorem </h1>
+                </div>
+                <div class="col-sm-4">
+                    <h1 class="text-center"> ipsum </h1>
+                </div>
+                <div class="col-sm-4">
+                    <h1 class="text-center"> dolor </h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="text-center"> lorem </h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- import Javascript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
