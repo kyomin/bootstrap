@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>디바이스 사이즈에 따라서 보이고 숨기기</title>
+
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .img {
+            background-image: url(sample-images/sample_images_01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 300px;
+            height: 300px;
+        }
+
+        .bo {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <span>인라인 요소</span>
+    <span>인라인 요소</span>
+    <!-- show : make display block -->
+    <span class="text-primary show">인라인 요소</span>
+    <span class="bg-danger hidden">인라인 요소</span>
+
+    <!-- text-hide : div 배경 이미지 위에 쓰여지는 텍스트를 지운다. -->
+    <div class="img text-hide">
+        부트스트랩 마스터하자!
+    </div>
+
+    <!-- 특정 기기 사이즈에서만 보이도록 컨트롤 -->
+    <div class="col-xs-12 bg-info bo visible-xs">
+        768px보다 작을 때만 보인다.
+    </div>
+    <div class="col-xs-12 bg-info bo visible-sm">
+        768px보다 크거나 같고 992px보다 작을 때 보인다.
+    </div>
+    <div class="col-xs-12 bg-info bo visible-md">
+        992px보다 크거나 같고 1200px보다 작을 때 보인다.
+    </div>
+    <div class="col-xs-12 bg-info bo visible-lg">
+        1200px보다 크거나 같을 때 보인다.
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+    <!-- 특정 기기 사이즈에서만 숨겨지도록 컨트롤 -->
+    <div class="col-xs-12 bg-info bo hidden-xs">
+        768px보다 작을 때만 숨긴다.
+    </div>
+    <div class="col-xs-12 bg-info bo hidden-sm">
+        768px보다 크거나 같고 992px보다 작을 때 숨긴다.
+    </div>
+    <div class="col-xs-12 bg-info bo hidden-md">
+        992px보다 크거나 같고 1200px보다 작을 때 숨긴다.
+    </div>
+    <div class="col-xs-12 bg-info bo hidden-lg">
+        1200px보다 크거나 같을 때 숨긴다.
+    </div>
+
+    <!-- import Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
