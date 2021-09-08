@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>그리드 시스템과 반응형 이미지 스타일 실습</title>
+
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        div {
+            border: 1px solid red;
+        }
+
+        #img1 {
+            background-image: url(sample-images/sample_images_05.png);
+            height: 650px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #img2 {
+            background-image: url(sample-images/sample_images_06.png);
+            height: 650px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>그리드 시스템을 활용한 이미지 레이아웃</h1>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <img src="sample-images/sample_images_01.png" alt="샘플 이미지 1" class="img-responsive" />
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="sample-images/sample_images_02.png" alt="샘플 이미지 2" class="img-responsive" />
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="sample-images/sample_images_03.png" alt="샘플 이미지 3" class="img-responsive" />
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <img src="sample-images/sample_images_04.png" alt="샘플 이미지 4" class="img-responsive" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 img-responsive" id="img1"></div>
+            <div class="col-sm-6 img-responsive" id="img2"></div>
+        </div>
+    </div>
+</body>
+
+</html>
