@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>도움 클래스</title>
+
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .w30 {
+            width: 30%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>
+        모달이나 경고같은 콘텐츠를 없애기 위해서
+        닫기 아이콘을 생성하는 방법으로는
+        button 태그 안에 span 태그를 주고
+        &times;을 넣은 후에
+        class명으로 close 이름을 부여한다.
+    </h3>
+    <button type="button" class="close" aria-label="Close">
+        <span aria-hidden="true">
+            &times;
+        </span>
+    </button>
+
+    <h3>드랍다운 메뉴에서 사용하는 캐럿버튼</h3>
+    <span class="caret"></span>
+    <br />
+    <button class="btn btn-danger">
+        드랍다운 메뉴
+        <span class="caret"></span>
+    </button>
+
+    <h3>실제로 동작하는 x버튼 만들기</h3>
+    <div class="alert btn btn-info">
+        이용해 주셔서 감사합니다.
+        <!-- for 'x' button -->
+        <button type="button" class="close" aria-label="Close" data-dismiss="alert">
+            <span aria-hidden="true">
+                &times;
+            </span>
+        </button>
+    </div>
+    <h3>
+        실제로 동작하는 x버튼이 구현되려면
+        x아이콘을 감싸고 있는 button 태그에
+        data-dismiss="alert"를 추가하고,
+        해당요소를 감싸고 있는 부모요소에는
+        클래스명으로 alert를 추가한다.
+    </h3>
+
+    <h3>
+        간편하게 원하는 요소를 왼쪽, 오른쪽으로 이동하고 싶을 때
+        사용하는 클래스명 pull-left, pull-right
+    </h3>
+    <div class="w30 pull-left bg-info">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique tempore consequatur nostrum a ipsam est
+        totam impedit molestias repudiandae? Nam beatae hic nisi ut, ducimus blanditiis cumque voluptatem quod odit?
+    </div>
+    <div class="bg-danger col-xs-2 pull-right">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt, nulla! Sint ut autem quaerat quia a nisi
+        dolorem
+        est corrupti qui ducimus voluptas eaque in eos nulla, culpa soluta porro?
+    </div>
+    <div class="clearfix"></div>
+    <div class="bg-warning col-xs-4">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto veniam animi, perspiciatis, repellendus
+        fuga reprehenderit quo hic nisi sapiente laboriosam accusantium. Impedit, nemo tenetur ullam repellat voluptatem
+        culpa laudantium placeat.
+    </div>
+
+    <!-- block 요소 중앙 정렬 -->
+    <div class="w30 center-block">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat fugiat, rem expedita necessitatibus eveniet a
+        deserunt voluptates, officia quod facilis neque? Ad velit inventore nesciunt omnis animi voluptatem magni, ut
+        commodi alias labore, eos, voluptate aspernatur nisi neque illo dolorem!
+    </div>
+    <!-- import Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
