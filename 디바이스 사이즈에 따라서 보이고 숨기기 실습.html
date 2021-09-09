@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>디바이스 사이즈에 따라서 보이고 숨기기 실습</title>
+
+    <!-- 부트스트랩 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .padding50 {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 bg-info padding50">
+                <h2 class="text-center">그리드 시스템이 가지고 있는 기본 패딩, 마진 값</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 bg-success hidden-xs">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae error est sunt fuga. Dicta corporis
+                    minus necessitatibus animi saepe deleniti soluta fuga! Commodi, doloribus neque consequuntur quod
+                    eum reprehenderit autem repudiandae! Inventore deserunt esse eveniet reprehenderit! Fugiat beatae
+                    assumenda expedita!</p>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-xs-12 bg-warning">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum maxime ullam inventore
+                            laborum impedit, tempora quidem cumque itaque ducimus adipisci sed quia ex iure suscipit
+                            aperiam labore enim optio unde, nisi recusandae dicta atque! Aspernatur et repellendus
+                            dolores atque nostrum.
+
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum aspernatur nisi consequuntur
+                            possimus voluptate aliquam quasi eos nostrum, necessitatibus beatae!
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 bg-primary hidden-md hidden-lg">
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum maxime ullam inventore
+                            laborum impedit, tempora quidem cumque itaque ducimus adipisci sed quia ex iure suscipit
+                            aperiam labore enim optio unde, nisi recusandae dicta atque! Aspernatur et repellendus
+                            dolores atque nostrum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 bg-danger">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae error est sunt fuga. Dicta corporis
+                    minus necessitatibus animi saepe deleniti soluta fuga! Commodi, doloribus neque consequuntur quod
+                    eum reprehenderit autem repudiandae! Inventore deserunt esse eveniet reprehenderit! Fugiat beatae
+                    assumenda expedita!</p>
+            </div>
+        </div>
+        <div class="row">
+            <hr />
+            <footer class="text-center">여기는 푸터가 들어가는 곳입니다.</footer>
+        </div>
+    </div>
+
+    <!-- import Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
