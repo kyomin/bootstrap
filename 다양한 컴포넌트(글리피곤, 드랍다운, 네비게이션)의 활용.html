@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>다양한 컴포넌트(글리피곤, 드랍다운, 네비게이션)의 활용</title>
+
+		<!-- 부트스트랩 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<style>
+			/* span {
+				background-color: yellow;
+			} */
+			div {
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+	<body>
+		<span>인라인요소인 span</span>
+		<div>블록요소인 div</div>
+
+		<!-- Glyphicons -->
+		<h1>Glyphicons 요소의 활용</h1>
+		<span class="glyphicon glyphicon-search"></span>
+		<button type="button" class="btn btn-warning btn-sm">
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+		</button>
+
+		<!-- 드랍다운 -->
+		<h1>드랍다운 요소의 활용</h1>
+		<div class="dropdown">
+			<button
+				class="btn btn-default dropdown-toggle"
+				type="button"
+				id="dropdownMenu1"
+				data-toggle="dropdown"
+				aria-expanded="true"
+			>
+				유명 사이트들
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+				<li role="presentation">
+					<a
+						role="menuitem"
+						tabindex="-1"
+						href="https://www.naver.com"
+						target="_blank"
+						>네이버</a
+					>
+				</li>
+				<li role="presentation">
+					<a
+						role="menuitem"
+						tabindex="-1"
+						href="https://www.google.com/"
+						target="_blank"
+						>구글</a
+					>
+				</li>
+				<li role="presentation">
+					<a
+						role="menuitem"
+						tabindex="-1"
+						href="https://www.daum.net/"
+						target="_blank"
+						>다음</a
+					>
+				</li>
+				<li role="presentation" class="divider"></li>
+				<li role="presentation">
+					<a
+						role="menuitem"
+						tabindex="-1"
+						href="https://www.amazon.com/"
+						target="_blank"
+						>아마존</a
+					>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 네비게이션 -->
+		<h1>네비게이션 요소의 활용</h1>
+
+		<h4>네비게이션 탭형</h4>
+		<ul class="nav nav-tabs">
+			<li role="presentation" class="active"><a href="#">Home</a></li>
+			<li role="presentation"><a href="#">Profile</a></li>
+			<li role="presentation"><a href="#">Messages</a></li>
+		</ul>
+
+		<h4>양쪽 정렬된 탭형</h4>
+		<ul class="nav nav-tabs nav-justified">
+			<li role="presentation" class="active"><a href="#">Home</a></li>
+			<li role="presentation"><a href="#">Profile</a></li>
+			<li role="presentation"><a href="#">Messages</a></li>
+		</ul>
+
+		<h4>네비게이션 알약형</h4>
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"><a href="#">Home</a></li>
+			<li role="presentation"><a href="#">Profile</a></li>
+			<li role="presentation"><a href="#">Messages</a></li>
+		</ul>
+
+		<h4>네비게이션 수직 알약형</h4>
+		<ul class="nav nav-pills nav-stacked">
+			<li role="presentation" class="active"><a href="#">Home</a></li>
+			<li role="presentation"><a href="#">Profile</a></li>
+			<li role="presentation"><a href="#">Messages</a></li>
+		</ul>
+
+		<!-- import Javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
