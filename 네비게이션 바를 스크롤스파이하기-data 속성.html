@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>네비게이션 바를 스크롤스파이하기-data 속성</title>
+
+		<!-- 부트스트랩 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+		<style>
+			body {
+				padding-top: 70px;
+				position: relative;
+			}
+			.navbar-brand img {
+				width: 100px;
+			}
+			.container-fluid .row p {
+				font-size: 2em;
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".navbar-example">
+		<!-- '스크롤스파이'란 스크롤할 때 해당하는 탭의 메뉴가 자동으로 활성화되는 기법이다. -->
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<!-- 디바이스 사이즈가 작을 때 보여지는 압축 햄버거 버튼 -->
+					<button
+						type="button"
+						class="navbar-toggle collapsed"
+						data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1"
+					>
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img alt="9pixelstudio" src="img/logo.jpg" />
+					</a>
+					<p class="navbar-text">
+						<a href="#" class="navbar-link">
+							9pixelstudio는 최고의 서비스를 제공합니다.
+						</a>
+					</p>
+				</div>
+
+				<div
+					class="collapse navbar-collapse navbar-example"
+					id="bs-example-navbar-collapse-1"
+				>
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="#book"
+								>디자인북 작업 <span class="sr-only">(current)</span></a
+							>
+						</li>
+						<li><a href="#video">동영상 작업</a></li>
+						<li><a href="#web">웹페이지 작업</a></li>
+						<li><a href="#ad">광고이미지 작업</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<div class="container-fluid">
+			<div id="book" class="row">
+				<div class="col-sm-4">
+					<p>
+						디자인북 작업 Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Aliquid inventore iste doloribus quae tempore unde, nemo omnis
+						fuga tempora pariatur, perspiciatis, dolores odit voluptas
+						excepturi! Cum saepe rerum dicta ex sequi, atque assumenda ut
+						exercitationem itaque eum alias fugit ipsa possimus hic autem
+						aspernatur quod officia harum! Aliquid, magni exercitationem?
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						inventore iste doloribus quae tempore unde, nemo omnis fuga tempora
+						pariatur, perspiciatis, dolores odit voluptas excepturi! Cum saepe
+						rerum dicta ex sequi, atque assumenda ut exercitationem itaque eum
+						alias fugit ipsa possimus hic autem aspernatur quod officia harum!
+						Aliquid, magni exercitationem?
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						inventore iste doloribus quae tempore unde, nemo omnis fuga tempora
+						pariatur, perspiciatis, dolores odit voluptas excepturi! Cum saepe
+						rerum dicta ex sequi, atque assumenda ut exercitationem itaque eum
+						alias fugit ipsa possimus hic autem aspernatur quod officia harum!
+						Aliquid, magni exercitationem?
+					</p>
+				</div>
+			</div>
+			<div id="video" class="row">
+				<div class="col-sm-4">
+					<p>
+						동영상 작업 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Aliquid inventore iste doloribus quae tempore unde, nemo omnis fuga
+						tempora pariatur, perspiciatis, dolores odit voluptas excepturi! Cum
+						saepe rerum dicta ex sequi, atque assumenda ut exercitationem itaque
+						eum alias fugit ipsa possimus hic autem aspernatur quod officia
+						harum! Aliquid, magni exercitationem?
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						inventore iste doloribus quae tempore unde, nemo omnis fuga tempora
+						pariatur, perspiciatis, dolores odit voluptas excepturi! Cum saepe
+						rerum dicta ex sequi, atque assumenda ut exercitationem itaque eum
+						alias fugit ipsa possimus hic autem aspernatur quod officia harum!
+						Aliquid, magni exercitationem?
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						inventore iste doloribus quae tempore unde, nemo omnis fuga tempora
+						pariatur, perspiciatis, dolores odit voluptas excepturi! Cum saepe
+						rerum dicta ex sequi, atque assumenda ut exercitationem itaque eum
+						alias fugit ipsa possimus hic autem aspernatur quod officia harum!
+						Aliquid, magni exercitationem?
+					</p>
+				</div>
+			</div>
+			<div id="web" class="row">
+				<div class="col-sm-4">
+					<p>
+						웹페이지 작업 Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Aliquid inventore iste doloribus quae tempore unde, nemo omnis
+						fuga tempora pariatur, perspiciatis, dolores odit voluptas
+						excepturi! Cum saepe rerum dicta ex sequi, atque assumenda ut
+						exercitationem itaque eum alias fugit ipsa possimus hic autem
+						aspernatur quod officia harum! Aliquid, magni exercitationem?
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						inventore iste doloribus quae tempore unde, nemo omnis fuga tempora
+						pariatur, perspiciatis, dolores odit voluptas excepturi! Cum saepe
+						rerum dicta ex sequi, atque assumenda ut exercitationem itaque eum
+						alias fugit ipsa possimus hic autem aspernatur quod officia harum!
+						Aliquid, magni exercitationem?
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						inventore iste doloribus quae tempore unde, nemo omnis fuga tempora
+						pariatur, perspiciatis, dolores odit voluptas excepturi! Cum saepe
+						rerum dicta ex sequi, atque assumenda ut exercitationem itaque eum
+						alias fugit ipsa possimus hic autem aspernatur quod officia harum!
+						Aliquid, magni exercitationem?
+					</p>
+				</div>
+			</div>
+			<div id="ad" class="row">
+				<div class="col-sm-4">
+					<p>
+						광고이미지 작업 Lorem ipsum dolor sit amet consectetur adipisicing
+						elit. Aliquid inventore iste doloribus quae tempore unde, nemo omnis
+						fuga tempora pariatur, perspiciatis, dolores odit voluptas
+						excepturi! Cum saepe rerum dicta ex sequi, atque assumenda ut
+						exercitationem itaque eum alias fugit ipsa possimus hic autem
+						aspernatur quod officia harum! Aliquid, magni exercitationem?
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						inventore iste doloribus quae tempore unde, nemo omnis fuga tempora
+						pariatur, perspiciatis, dolores odit voluptas excepturi! Cum saepe
+						rerum dicta ex sequi, atque assumenda ut exercitationem itaque eum
+						alias fugit ipsa possimus hic autem aspernatur quod officia harum!
+						Aliquid, magni exercitationem?
+					</p>
+				</div>
+				<div class="col-sm-4">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+						inventore iste doloribus quae tempore unde, nemo omnis fuga tempora
+						pariatur, perspiciatis, dolores odit voluptas excepturi! Cum saepe
+						rerum dicta ex sequi, atque assumenda ut exercitationem itaque eum
+						alias fugit ipsa possimus hic autem aspernatur quod officia harum!
+						Aliquid, magni exercitationem?
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- import Javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
