@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>자바스크립트로 동작하는 요소(모달창)의 활용</title>
+
+		<!-- 부트스트랩 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+		<!-- CSS -->
+		<style>
+			#myModal_javascript {
+				position: relative;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--  
+      모달
+
+      버튼을 클릭하면 컨텐츠 창이 뜨면서 배경화면이 비활성화되고,
+      컨텐츠 창을 닫으면 원래대로 돌아가는 형태를 '모달'이라 한다.
+
+      부트스트랩에서는 버튼을 클릭하면 자바스크립트를 활용하여 모달창을 활성화시킨다.
+    -->
+		<h1>모달</h1>
+		<h3>data 속성을 이용한 구현</h3>
+		<!-- Button trigger modal -->
+		<button
+			type="button"
+			class="btn btn-primary btn-lg btn-data"
+			data-toggle="modal"
+			data-target="#myModal_data"
+		>
+			이벤트 참여하기
+		</button>
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="myModal_data"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="myModalLabel"
+		>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">스타벅스 이벤트 참여</h4>
+					</div>
+					<div class="modal-body">
+						일년에 한 번 열리는 축제에 참여하고 이벤트에 참가하여 무료 커피
+						쿠폰을 받아가세요
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							다음에 참여할게요
+						</button>
+						<a
+							href="https://www.boostcourse.org/open-boostcourse"
+							type="button"
+							class="btn btn-primary"
+							target="_blank"
+						>
+							지금 바로 참여할게요
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section>
+			<h2>스타벅스 홈페이지에 오신 것을 환영합니다.</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt adipisci,
+				aut autem obcaecati facilis officia illo pariatur sint eos, beatae,
+				tempora dolores inventore totam delectus deleniti enim laboriosam ad?
+				Asperiores sunt numquam tempore voluptates dolorem libero suscipit quos
+				consequatur quia debitis, nobis ex facilis, illum omnis reprehenderit
+				magnam fugit itaque!
+			</p>
+		</section>
+
+		<h3>자바스크립트를 이용한 구현</h3>
+		<!-- Button trigger modal -->
+		<button
+			type="button"
+			class="btn btn-info btn-lg btn-javascript"
+			data-toggle="modal"
+		>
+			후기 이벤트
+		</button>
+		<button
+			type="button"
+			class="btn btn-danger btn-lg javascript_close"
+			data-toggle="modal"
+		>
+			후기 이벤트 창 닫기
+		</button>
+
+		<!-- Modal -->
+		<div
+			class="modal fade"
+			id="myModal_javascript"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="myModalLabel"
+		>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title" id="myModalLabel">댓글을 달아주세요</h4>
+					</div>
+					<div class="modal-body">여러분의 참여가 더 좋은 제품을 만듭니다.</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							닫기
+						</button>
+						<a
+							href="https://ide.goorm.io/"
+							type="button"
+							class="btn btn-primary"
+							target="_blank"
+						>
+							홈페이지 바로가서 댓글 달기
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- import Javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$('.btn-javascript').click(function () {
+					$('#myModal_javascript').modal({
+						backdrop: false,
+						keyboard: false,
+					});
+				});
+				$('.javascript_close').click(function () {
+					$('#myModal_javascript').modal('hide');
+				});
+
+				// 모달의 생명 주기를 이용하여 이벤트 추가하기
+				$('#myModal_javascript').on('hidden.bs.modal', function (e) {
+					alert('이벤트에 참여해 주셔서 감사합니다');
+				});
+			});
+		</script>
+	</body>
+</html>
