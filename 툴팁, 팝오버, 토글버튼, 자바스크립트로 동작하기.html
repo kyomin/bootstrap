@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>툴팁, 팝오버, 토글버튼, 자바스크립트로 동작하기</title>
+
+		<!-- 부트스트랩 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!-- 툴팁 -->
+		<h1>툴팁</h1>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<a href="#" data-toggle="tooltip" title="Some tooltip text!"
+			>Hover over me</a
+		>
+		<button
+			id="left"
+			type="button"
+			class="btn btn-default"
+			data-toggle="tooltip"
+			data-placement="left"
+			title="Tooltip on left"
+		>
+			Tooltip on left
+		</button>
+
+		<button
+			id="top"
+			type="button"
+			class="btn btn-default"
+			data-toggle="tooltip"
+			data-placement="top"
+			title="Tooltip on top"
+		>
+			Tooltip on top
+		</button>
+
+		<button
+			id="bottom"
+			type="button"
+			class="btn btn-default"
+			data-toggle="tooltip"
+			data-placement="bottom"
+		>
+			Tooltip on bottom
+		</button>
+
+		<button
+			id="right"
+			type="button"
+			class="btn btn-default"
+			data-toggle="tooltip"
+			data-placement="right"
+			title="Tooltip on right"
+		>
+			Tooltip on right
+		</button>
+
+		<!-- Generated markup by the plugin -->
+		<!-- <div class="tooltip top" role="tooltip">
+			<div class="tooltip-arrow"></div>
+			<div class="tooltip-inner">Some tooltip text!</div>
+		</div> -->
+
+		<!-- 팝오버 -->
+		<h1>팝오버</h1>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button
+			type="button"
+			class="btn btn-default"
+			data-container="body"
+			data-toggle="popover"
+			data-placement="left"
+			data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+		>
+			Popover on left
+		</button>
+
+		<button
+			type="button"
+			class="btn btn-default"
+			data-container="body"
+			data-toggle="popover"
+			data-placement="top"
+			data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+		>
+			Popover on top
+		</button>
+
+		<button
+			type="button"
+			class="btn btn-default"
+			data-container="body"
+			data-toggle="popover"
+			data-placement="bottom"
+			data-content="Vivamus
+		sagittis lacus vel augue laoreet rutrum faucibus."
+		>
+			Popover on bottom
+		</button>
+
+		<button
+			type="button"
+			class="btn btn-default"
+			data-container="body"
+			data-toggle="popover"
+			data-placement="right"
+			data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+		>
+			Popover on right
+		</button>
+
+		<!-- 토글 버튼 -->
+		<h1>토글 버튼</h1>
+		<h3>단일 토글</h3>
+		<button
+			type="button"
+			class="btn btn-primary"
+			data-toggle="button"
+			aria-pressed="false"
+			autocomplete="off"
+		>
+			Single toggle
+		</button>
+
+		<h3>체크박스</h3>
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary active">
+				<input type="checkbox" autocomplete="off" checked /> Checkbox 1
+				(pre-checked)
+			</label>
+			<label class="btn btn-primary">
+				<input type="checkbox" autocomplete="off" /> Checkbox 2
+			</label>
+			<label class="btn btn-primary">
+				<input type="checkbox" autocomplete="off" /> Checkbox 3
+			</label>
+		</div>
+
+		<h3>라디오</h3>
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn btn-primary active">
+				<input
+					type="radio"
+					name="options"
+					id="option1"
+					autocomplete="off"
+					checked
+				/>
+				Radio 1 (preselected)
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="options" id="option2" autocomplete="off" />
+				Radio 2
+			</label>
+			<label class="btn btn-primary">
+				<input type="radio" name="options" id="option3" autocomplete="off" />
+				Radio 3
+			</label>
+		</div>
+
+		<!-- import Javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- 툴팁 동작 -->
+		<script>
+			$(function () {
+				// data-toggle="tooltip"인 DOM들을 선택해서 tooltip이라는 메서드를 주고 있다.
+				// $('[data-toggle="tooltip"]').tooltip();
+
+				$('#left').click(function () {
+					$('#left').tooltip('show');
+				});
+				$('#right').hover(function () {
+					$('#right').tooltip({
+						placement: 'bottom',
+					});
+				});
+				$('#bottom').tooltip({
+					title: '툴팁의 내용을 옵션으로도 줄 수 있음',
+				});
+				$('#top').tooltip();
+				$('#top').on('hidden.bs.tooltip', function () {
+					alert(
+						'해당하는 말풍선의 내용이 궁금하다면 관련 웹사이트를 방문해보세요.'
+					);
+				});
+			});
+		</script>
+		<!-- 팝오버 동작 -->
+		<script>
+			// 디폴트는 클릭 발생 시 보여진다.
+			$('[data-toggle="popover"]').popover({
+				trigger: 'hover',
+			});
+		</script>
+	</body>
+</html>
