@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>컬랩스, 아코디언 자바스크립트로 동작하기</title>
+
+		<!-- 부트스트랩 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<!--  
+      컬랩스(Collapse) - 보이기/가리기
+
+      버튼을 클릭하면 단일 컨텐츠가 보이거나 숨겨지는 요소를 컬랩스라 하며,
+      <a> 태그나 <button> 태그를 만들어서 data-toggle="collapse"로 주고
+      컨텐츠를 감싸는 div를 만들어 class="collapse"를 부여하여 구현한다.
+    -->
+		<h1>컬랩스(Collapse)</h1>
+		<a
+			class="btn btn-primary"
+			role="button"
+			data-toggle="collapse"
+			href="#collapseExample"
+			aria-expanded="false"
+			aria-controls="collapseExample"
+		>
+			Link with href
+		</a>
+		<button
+			class="btn btn-primary"
+			type="button"
+			data-toggle="collapse"
+			data-target="#collapseExample"
+			aria-expanded="false"
+			aria-controls="collapseExample"
+		>
+			Button with data-target
+		</button>
+		<div class="collapse" id="collapseExample">
+			<div class="well">
+				버튼을 클릭했을 때 버튼과 관련 있는 단일 컨텐츠를 보여줬다가 숨겨줬다가
+				할 수 있는 토글 버튼을 만들 수 있다. Lorem ipsum dolor sit amet
+				consectetur adipisicing elit. Unde debitis facere dolor minus ad ducimus
+				nulla delectus! Totam ullam maiores facilis quam iste officia modi
+				dignissimos architecto quos ipsam! Voluptatibus.
+			</div>
+		</div>
+
+		<!-- 
+      아코디언(Accordion)
+
+      컬랩스를 확장하여 그룹으로 만든 후,
+      각 타이틀을 클릭하면 컬랩스가 되는 요소를 말한다.
+    -->
+		<h1>아코디언(Accordion)</h1>
+		<button class="btn">컨텐츠 모두 보이고 숨기기</button>
+		<button class="btn_show">모두 보이기</button>
+		<button class="btn_hide">모두 숨기기</button>
+		<div
+			class="panel-group"
+			id="accordion"
+			role="tablist"
+			aria-multiselectable="true"
+		>
+			<div class="panel panel-primary">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+						<a
+							role="button"
+							data-toggle="collapse"
+							data-parent="#accordion"
+							href="#collapseOne"
+							aria-expanded="true"
+							aria-controls="collapseOne"
+						>
+							Collapsible Group Item #1
+						</a>
+					</h4>
+				</div>
+				<div
+					id="collapseOne"
+					class="panel-collapse collapse"
+					role="tabpanel"
+					aria-labelledby="headingOne"
+				>
+					<div class="panel-body">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+						terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+						skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+						Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+						single-origin coffee nulla assumenda shoreditch et. Nihil anim
+						keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+						sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+						occaecat craft beer farm-to-table, raw denim aesthetic synth
+						nesciunt you probably haven't heard of them accusamus labore
+						sustainable VHS.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-danger">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+						<a
+							class="collapsed"
+							role="button"
+							data-toggle="collapse"
+							data-parent="#accordion"
+							href="#collapseTwo"
+							aria-expanded="false"
+							aria-controls="collapseTwo"
+						>
+							Collapsible Group Item #2
+						</a>
+					</h4>
+				</div>
+				<div
+					id="collapseTwo"
+					class="panel-collapse collapse"
+					role="tabpanel"
+					aria-labelledby="headingTwo"
+				>
+					<div class="panel-body">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+						terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+						skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+						Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+						single-origin coffee nulla assumenda shoreditch et. Nihil anim
+						keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+						sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+						occaecat craft beer farm-to-table, raw denim aesthetic synth
+						nesciunt you probably haven't heard of them accusamus labore
+						sustainable VHS.
+					</div>
+				</div>
+			</div>
+			<div class="panel panel-info">
+				<div class="panel-heading" role="tab" id="headingThree">
+					<h4 class="panel-title">
+						<a
+							class="collapsed"
+							role="button"
+							data-toggle="collapse"
+							data-parent="#accordion"
+							href="#collapseThree"
+							aria-expanded="false"
+							aria-controls="collapseThree"
+						>
+							Collapsible Group Item #3
+						</a>
+					</h4>
+				</div>
+				<div
+					id="collapseThree"
+					class="panel-collapse collapse"
+					role="tabpanel"
+					aria-labelledby="headingThree"
+				>
+					<div class="panel-body">
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+						terry richardson ad squid. 3 wolf moon officia aute, non cupidatat
+						skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+						Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
+						single-origin coffee nulla assumenda shoreditch et. Nihil anim
+						keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
+						sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+						occaecat craft beer farm-to-table, raw denim aesthetic synth
+						nesciunt you probably haven't heard of them accusamus labore
+						sustainable VHS.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- import Javascript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<!-- 아코디언 동작 -->
+		<script>
+			$(function () {
+				$('.btn').click(function () {
+					$('.collapse').collapse('toggle');
+				});
+				$('.btn_show').click(function () {
+					$('.collapse').collapse('show');
+				});
+				$('.btn_hide').click(function () {
+					$('.collapse').collapse('hide');
+				});
+				$('.collapse').on('hidden.bs.collapse', function () {
+					alert('컨텐츠가 모두 숨겨졌습니다.');
+				});
+			});
+		</script>
+	</body>
+</html>
